@@ -16,23 +16,15 @@ body {
     border: 2px solid #000000;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    width: min(100vw, 430px);
-    margin: 0 auto;
+    width: min(90vw, 400px);
+    height: auto;
+    min-height: 600px;
+    margin: auto;
     position: relative;
     color: #000000;
-    transform: translateY(100vh) rotate(45deg) scale(1);
+    transform: translateY(100vh) rotate(45deg) scale(0.5);
     opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
-
-.invitation.animate-in {
-    animation: dealCard 1s ease-out forwards;
-}
-
 
 .corner {
     position: absolute;
@@ -77,9 +69,14 @@ body {
 }
 
 .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
     width: 100%;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -177,38 +174,31 @@ a:hover {
 /* Responsividad para móviles */
 @media (max-width: 600px) {
     body {
-        padding: 3px;
+        padding: 5px;
     }
 
     .invitation {
-        width: 98vw;
-        border-width: 1px;
-        padding: 18px;
-    }
-
-    .invitation.animate-in {
-        animation: dealCard 0.8s ease-out forwards;
+        width: 95vw;
+        min-height: 500px;
     }
 
     .title h1 {
-        font-size: 3.2em;
-        letter-spacing: 0.02em;
+        font-size: 2.2em;
     }
 
     .invitation p {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .content {
+        padding: 15px;
     }
 
     .corner {
-        font-size: 44px;
+        font-size: 36px;
     }
 
     .center-symbol {
-        font-size: 130px;
-    }
-
-    .schedule td {
-        padding: 12px 16px;
-        font-size: 1.05em;
+        font-size: 100px;
     }
 }
