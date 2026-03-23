@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'My Chemical Romance';
+    src: url('my_chemical_romance.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a5a0a; /* Verde oscuro para mesa de póquer */
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.invitation {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    color: #000000;
+    transform: translateY(100vh) rotate(45deg) scale(0.5);
+    opacity: 0;
+}
+
+.corner {
+    position: absolute;
+    font-size: 42px;
+    color: #ff0000;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    transform: rotate(180deg);
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    transform: rotate(180deg);
+}
+
+.center-symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: #ff0000;
+    z-index: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title h1 {
+    text-align: center;
+    font-family: 'My Chemical Romance', Arial, sans-serif;
+    color: #000000;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.invitation p {
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.invitation .details {
+    margin-top: 10px;
+}
+
+.invitation strong {
+    color: #ff0000;
+}
+
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.schedule td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.schedule td:first-child {
+    font-weight: bold;
+    width: 40%;
+    color: #ff0000;
+}
+
+.schedule td:last-child {
+    width: 60%;
+}
+
+a {
+    color: #ff0000;
+}
+
+a:hover {
+    color: #cc0000;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#playButton {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    padding: 20px 40px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.invitation.animate-in {
+    animation: dealCard 1s ease-out forwards;
+}
+
+@keyframes dealCard {
+    0% {
+        transform: translateY(100vh) rotate(45deg) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
