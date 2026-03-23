@@ -17,13 +17,16 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     width: min(100vw, 430px);
-    height: auto;
-    min-height: 600px;
     margin: 0 auto;
     position: relative;
     color: #000000;
     transform: translateY(100vh) rotate(45deg) scale(1);
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .invitation.animate-in {
@@ -74,14 +77,9 @@ body {
 }
 
 .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -184,9 +182,8 @@ a:hover {
 
     .invitation {
         width: 98vw;
-        min-height: 700px;
-        transform: none;
         border-width: 1px;
+        padding: 18px;
     }
 
     .invitation.animate-in {
@@ -200,13 +197,6 @@ a:hover {
 
     .invitation p {
         font-size: 1.2em;
-    }
-
-    .content {
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -48%);
-        padding: 18px;
     }
 
     .corner {
